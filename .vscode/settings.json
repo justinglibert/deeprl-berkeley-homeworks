@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/justinglibert/anaconda3/envs/marlo/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "/Users/justinglibert/anaconda3/envs/marlo/bin/pylint",
+    "python.linting.enabled": true
+}

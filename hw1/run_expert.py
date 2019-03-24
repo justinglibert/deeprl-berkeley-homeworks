@@ -8,15 +8,14 @@ Example usage:
 
 Author of this script and included expert policies: Jonathan Ho (hoj@openai.com)
 """
-
+from __future__ import absolute_import
 import os
 import pickle
 import tensorflow as tf
 import numpy as np
-import tf_util
 import gym
+import tf_util
 import load_policy
-
 def main():
     import argparse
     parser = argparse.ArgumentParser()
@@ -45,6 +44,7 @@ def main():
         for i in range(args.num_rollouts):
             print('iter', i)
             obs = env.reset()
+            print(obs.shape)
             done = False
             totalr = 0.
             steps = 0
