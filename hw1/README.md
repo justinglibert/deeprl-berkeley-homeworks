@@ -25,3 +25,25 @@ In `experts/`, the provided expert policies are:
 * Walker2d-v2.pkl
 
 The name of the pickle file corresponds to the name of the gym environment.
+
+# How to run
+1) Generate the expert policies rollouts
+```bash
+./gen_rollouts.sh
+```
+2) Train the behavioural cloning models and save the stats (returns over time)
+```bash
+./train_bc.sh
+```
+3) Train the DAgger models
+```bash
+./train_dagger.sh
+```
+4) Generate the pdf report
+```bash
+python generate_report.py
+```
+On MacOS:
+```bash
+python.app generate_report.py
+```

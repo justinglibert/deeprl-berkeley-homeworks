@@ -59,7 +59,7 @@ def main(args):
     optim = tf.train.AdamOptimizer(learning_rate=FLAGS.lr)
     for (_, (obs, actions)) in enumerate(tqdm(dataset.take(FLAGS.steps), total=FLAGS.steps)):
         with tf.GradientTape() as tape:
-            predicted_action = model(obs)
+            predicted_action = model(obs, training=True)
             error = tf.losses.mean_squared_error(predicted_action, actions)
 
         grads = tape.gradient(error, model.trainable_variables)
